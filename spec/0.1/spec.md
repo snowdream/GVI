@@ -18,7 +18,7 @@ In Fact, GVI is a json file,and end with the postfix ".gvi".
   "copyright":"CC-BY-NC-SA 3.0",
   "link":"http://www.wylyw.cn/",
   "time":"2016-04-19 18:47:46.203 +0800",
-  "keywords":"Wuyuan",
+  "keywords":"Wuyuan,Jiangxi",
   "bounds":{
       "minlongitude":117.886047,
       "minlatitude":29.328013,
@@ -66,3 +66,23 @@ In Fact, GVI is a json file,and end with the postfix ".gvi".
   ]
 }
 ```
+
+## HEAD
+1. verion, should be 0.1    required.
+1. creator, which tool create the gvi file. if not set,"Mock GPS Player" is the default value.  required.
+1. provider, which is the location provider. usually,it should be devices, or location provider. suck as, device, autonavi, baidu, google,openstreetmap etc.if not set,"device" is the default value. required.
+1. name,desc,author,copyright,link,time,keywords are optional.
+1. bound, is the bound of your tracks.  required.
+
+## BODY
+1. track,contains many Navi Segments, which seperated by navi types. The navi types are driving,transit,walking,cycling,flights etc.  required.
+1. type, the navi type of the Navi Segment.   required.
+driving: 0,
+transit: 1,
+walking: 3,
+cycling: 4,
+flights: 5
+1. start,the start geopoint of the navi segment. required.
+1. end,the end geopoint of the navi segment. required.
+1. middle,the middle geopoints of the navi segment. optional.
+1. loc, locations of the navi segment.  required.
