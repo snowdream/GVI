@@ -77,11 +77,13 @@ In Fact, GVI is a json file,and end with the postfix ".gvi".
 ## BODY
 1. track,contains many Navi Segments, which seperated by navi types. The navi types are driving,transit,walking,cycling,flights etc.  required.
 1. type, the navi type of the Navi Segment.   required.
-driving: 0,
-transit: 1,
-walking: 3,
-cycling: 4,
-flights: 5
+```
+driving: 0
+transit: 1
+walking: 2
+cycling: 3
+flights: 4
+```
 1. start,the start geopoint of the navi segment. required.
 1. end,the end geopoint of the navi segment. required.
 1. middle,the middle geopoints of the navi segment. optional.
