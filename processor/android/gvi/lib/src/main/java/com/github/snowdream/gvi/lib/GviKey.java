@@ -5,33 +5,33 @@ package com.github.snowdream.gvi.lib;
  * https://github.com/snowdream/GVI/blob/master/spec/0.1/spec.md
  * see:
  */
-public class GviKey {
-    public static final String KEY_VERSION = "version";
-    public static final String KEY_CREATOR = "creator";
-    public static final String KEY_PROVIDER = "provider";
-    public static final String KEY_NAME = "name";
-    public static final String KEY_DESC = "desc";
-    public static final String KEY_AUTHOR = "author";
-    public static final String KEY_COPYRIGHT = "copyright";
-    public static final String KEY_LINK = "link";
-    public static final String KEY_TIME = "time";
-    public static final String KEY_KEYWORDS = "keywords";
-    public static final String KEY_BOUNDS = "bounds";
-    public static final String KEY_TRACK = "track";
-    public static final String KEY_TYPE = "type";
-    public static final String KEY_START = "start";
-    public static final String KEY_END = "end";
-    public static final String KEY_MIDDLE = "middle";
-    public static final String KEY_LOC = "loc";
-    public static final String KEY_ELAPSEDREALTIMENANOS = "elapsedrealtimenanos";
-    public static final String KEY_LONGITUDE = "longitude";
-    public static final String KEY_LATITUDE = "latitude";
-    public static final String KEY_ALTITUDE = "altitude";
-    public static final String KEY_SPEED = "speed";
-    public static final String KEY_BEARING = "bearing";
-    public static final String KEY_ACCURACY = "accuracy";
-    public static final String KEY_MINLONGITUDE = "minlongitude";
-    public static final String KEY_MINLATITUDE = "minlatitude";
-    public static final String KEY_MAXLONGITUDE = "maxlongitude";
-    public static final String KEY_MAXLATITUDE = "maxlatitude";
+final class GviKey {
+    static final String KEY_VERSION = "version";
+    static final String KEY_CREATOR = "creator";
+    static final String KEY_PROVIDER = "provider";
+    static final String KEY_NAME = "name";
+    static final String KEY_DESC = "desc";
+    static final String KEY_AUTHOR = "author";
+    static final String KEY_COPYRIGHT = "copyright";
+    static final String KEY_LINK = "link";
+    static final String KEY_TIME = "time";
+    static final String KEY_KEYWORDS = "keywords";
+    static final String KEY_BOUNDS = "bounds";
+    static final String KEY_TRACK = "track";
+    static final String KEY_TYPE = "type";
+    static final String KEY_START = "start";
+    static final String KEY_END = "end";
+    static final String KEY_MIDDLE = "middle";
+    static final String KEY_LOC = "loc";
+    static final String KEY_ELAPSEDREALTIMENANOS = "elapsedrealtimenanos";
+    static final String KEY_LONGITUDE = "longitude";
+    static final String KEY_LATITUDE = "latitude";
+    static final String KEY_ALTITUDE = "altitude";
+    static final String KEY_SPEED = "speed";
+    static final String KEY_BEARING = "bearing";
+    static final String KEY_ACCURACY = "accuracy";
+    static final String KEY_MINLONGITUDE = "minlongitude";
+    static final String KEY_MINLATITUDE = "minlatitude";
+    static final String KEY_MAXLONGITUDE = "maxlongitude";
+    static final String KEY_MAXLATITUDE = "maxlatitude";
 }

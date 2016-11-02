@@ -1,7 +1,5 @@
 package com.github.snowdream.gvi.lib.entity;
 
-import java.util.List;
-
 /**
  * Gvi Created by yanghui.yangh on 2016/4/20.
  */
