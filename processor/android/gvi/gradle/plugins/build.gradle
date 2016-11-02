@@ -17,7 +17,7 @@ buildscript {
 }
 
 allprojects {
-
+  
     repositories {
         maven { url  'file:///' + System.getenv("ANDROID_HOME")+ '/extras/android/m2repository/'}
         maven { url  'file:///' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath}
