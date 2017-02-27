@@ -1,4 +1,7 @@
 buildscript {
+    ext.kotlin_version = '1.0.6'
+    ext.dokka_version = '0.9.13'
+
     repositories {
         maven { url  'file:///' + System.getenv("ANDROID_HOME")+ '/extras/android/m2repository/'}
         maven { url  'file:///' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath}
@@ -13,6 +16,9 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.2.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5' //for bintray_push.gradle
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.1'//for bintray_push.gradle
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" //for kotlin
+        classpath "org.jetbrains.dokka:dokka-android-gradle-plugin:${dokka_version}" //for kotlin android dokka
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${dokka_version}" //for kotlin java dokka
     }
 }
 
@@ -31,10 +37,23 @@ allprojects {
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
     }
+
+    tasks.withType(Javadoc) {
+        options {
+            locale = 'en_US'
+            encoding = 'UTF-8'
+            charSet = 'UTF-8'
+            links("http://docs.oracle.com/javase/7/docs/api/")
+        }
+    }
 }
 
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
+    gradleVersion = '3.3'
     distributionUrl = "http://android-mirror.bugly.qq.com:8080/gradle/gradle-${gradleVersion}-bin.zip"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

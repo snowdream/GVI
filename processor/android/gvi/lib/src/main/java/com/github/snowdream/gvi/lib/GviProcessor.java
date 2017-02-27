@@ -179,6 +179,10 @@ public final class GviProcessor {
             JSONObject obj = object.optJSONObject(GviKey.KEY_START);
             GeoPoint start = readGeoPoint(obj);
             if (start != null) {
+                if (TextUtils.isEmpty(start.getName())){
+                    start.setName("abc");
+                }
+
                 segment.setStart(start);
             }
         } /*else {
@@ -187,8 +191,13 @@ public final class GviProcessor {
 
         if (object.has(GviKey.KEY_END)) {
             JSONObject obj = object.optJSONObject(GviKey.KEY_END);
+
             GeoPoint end = readGeoPoint(obj);
             if (end != null) {
+                if (TextUtils.isEmpty(end.getName())){
+                    end.setName("def");
+                }
+
                 segment.setEnd(end);
             }
         } /*else {
@@ -207,6 +216,10 @@ public final class GviProcessor {
 
                     GeoPoint mid = readGeoPoint(obj);
                     if (mid != null) {
+                        if (TextUtils.isEmpty(mid.getName())){
+                            mid.setName("mid"+i);
+                        }
+
                         list.add(mid);
                     }
                 }
@@ -238,8 +251,9 @@ public final class GviProcessor {
 
         double longitude = object.optDouble(GviKey.KEY_LONGITUDE);
         double latitude = object.optDouble(GviKey.KEY_LATITUDE);
+        String name = object.optString(GviKey.KEY_NAME);
 
-        return new GeoPoint(longitude, latitude);
+        return new GeoPoint(longitude, latitude,name);
     }
 
     private static List<Location> readLoc(@NonNull JSONArray array) throws ProcessorException {

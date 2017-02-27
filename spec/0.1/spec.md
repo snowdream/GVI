@@ -30,15 +30,18 @@ In Fact, GVI is a json file,and end with the postfix ".gvi".
     "type": 1,
     "start":{
       "longitude":117.886047,
-      "latitude":29.328013
+      "latitude":29.328013,
+      "name":"start"
     },
     "end":{
       "longitude":117.886047,
-      "latitude":29.328013
+      "latitude":29.328013,
+      "name":"end"
     },
     "middle":[{
       "longitude":117.886047,
-      "latitude":29.328013
+      "latitude":29.328013,
+      "name":"middle0"
     },
     {
       "longitude":117.886047,
