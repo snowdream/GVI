@@ -476,6 +476,9 @@ public final class GviProcessor {
         double latitude = geoPoint.getLatitude();
         object.put(GviKey.KEY_LATITUDE, latitude);
 
+        String name = geoPoint.getName();
+        object.put(GviKey.KEY_NAME, name);
+
         return object;
     }
 
